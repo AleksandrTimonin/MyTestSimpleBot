@@ -1,0 +1,6 @@
+server:
+  port: 8084
+
+bot:
+  name: simpleTestBotWithRabbitMQ_bot
+  token: 6876614306:AAFh-97GuAGdU8l-08GVQbLSvV3ZjOppoGc
