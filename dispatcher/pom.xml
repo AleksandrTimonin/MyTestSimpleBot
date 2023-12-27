@@ -28,7 +28,7 @@
         </dependency>
         <dependency>
             <groupId>aa.timonin</groupId>
-            <artifactId>simpleBotwithRabbitMQ</artifactId>
+            <artifactId>common-RabbitMQ</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>

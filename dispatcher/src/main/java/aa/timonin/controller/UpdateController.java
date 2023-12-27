@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
+import static aa.timonin.RabbitQueue.*;
+
 @Log4j
 @Component
 public class UpdateController {
@@ -65,7 +67,7 @@ public class UpdateController {
     }
 
     private void processDocMessage(Update update) {
-        updateProducer.produce("doc_update_queue",update);
+        updateProducer.produce(DOC_UPDATE_QUEUE,update);
         var sendMessage = prepareSendMessage(update, "Документ получен, обрабатывается...");
         setView(sendMessage);
 
@@ -73,13 +75,13 @@ public class UpdateController {
     }
 
     private void processPhotoMessage(Update update) {
-        updateProducer.produce("photo_update_queue",update);
+        updateProducer.produce(PHOTO_UPDATE_QUEUE,update);
         var sendMessage = prepareSendMessage(update, "Фото получено, обрабатывается...");
         setView(sendMessage);
     }
 
     private void processTextMessage(Update update) {
-        updateProducer.produce("text_update_queue",update);
+        updateProducer.produce(TEXT_UPDATE_QUEUE,update);
         var sendMessage = prepareSendMessage(update, "Сообщение получено, обрабатывается...");
         setView(sendMessage);
     }
