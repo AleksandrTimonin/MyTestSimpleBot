@@ -37,3 +37,5 @@ build/
 ### Mac OS ###
 .DS_Store
 /dispatcher/src/main/resources/
+/logs/dispatcher.log
+/logs/

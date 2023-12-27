@@ -7,10 +7,13 @@ import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+
+import javax.annotation.PostConstruct;
 
 @Log4j
 @Component
@@ -18,22 +21,35 @@ public class DispatcherBot extends TelegramLongPollingBot {
 
 
 
-    @Value("${bot.token}")
-    private String token;
+
     @Value("${bot.name}")
     private String name;
+
+
+    private final UpdateController updateController;
+
+    public DispatcherBot( @Value("${bot.token}") String botToken, UpdateController updateController) {
+
+        super(botToken);
+        log.debug( "КОНСТРУКТОР ДИСПАТЧЕР БОТ ");
+        this.updateController = updateController;
+    }
+
+
+
+    @PostConstruct
+    private void init(){
+        log.debug( "ПОСТКОНСТРАКТ метод ИНИТ в ДИСПАТЧЕР БОТ ");
+        updateController.registerBot(this);
+    }
 
 
 
     @Override
     public void onUpdateReceived(Update update) {
-        var originalMessage = update.getMessage();
-        log.debug(originalMessage.getText());
-        var response = new SendMessage();
-        response.setText(originalMessage.getChatId().toString());
+        log.debug("получено сообщение : "+ update.getMessage().getText() );
+        updateController.processUpdate(update);
 
-        response.setChatId(originalMessage.getChatId());
-        sendMessage(response);
 
 
 
@@ -45,10 +61,7 @@ public class DispatcherBot extends TelegramLongPollingBot {
         return name;
     }
 
-    @Override
-    public String getBotToken() {
-        return token;
-    }
+
     private void sendMessage(SendMessage message){
         if(message!= null){
             try{
@@ -57,5 +70,12 @@ public class DispatcherBot extends TelegramLongPollingBot {
                 log.error(e.getMessage());
             }
         }
+    }
+
+    public void sendAnswerMessage(SendMessage response) {
+
+        sendMessage(response);
+        log.debug(response.getText() + " : отправлено");
+
     }
 }

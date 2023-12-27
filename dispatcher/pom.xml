@@ -26,6 +26,11 @@
             <artifactId>telegrambots-spring-boot-starter</artifactId>
             <version>${telegram.starter.version}</version>
         </dependency>
+        <dependency>
+            <groupId>aa.timonin</groupId>
+            <artifactId>simpleBotwithRabbitMQ</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 
