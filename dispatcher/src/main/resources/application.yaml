@@ -4,3 +4,10 @@ server:
 bot:
   name:
   token:
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: userok
+    password: p@ssw0rd

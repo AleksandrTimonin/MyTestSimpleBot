@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ff3e9f8-f2a1-4aa9-b0b2-1198bec70783" name="Changes" comment="- устранена проблема с устаревшими методами&#10;- не разобрался как он подключил из своего модуля статические константы, он сам написал что так лучше не делать, так что пока оставил там строки с названиями очередей, возможно потом захардкожу их где-то ещё&#10;второй урок из курса по разработке telegram ботов на java&#10;начали писать слой сервисов.&#10;-поправил косячный импорт и убрал лишние логи на старте при создании контекста">
+    <list default="true" id="9ff3e9f8-f2a1-4aa9-b0b2-1198bec70783" name="Changes" comment="- разобрался с не подтягивавшимися константами">
+      <change afterPath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/config/RabbitMQConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dispatcher/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/service/UpdateProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/service/UpdateProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/service/impl/UpdateProducerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/service/impl/UpdateProducerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dispatcher/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703686834741</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="- разобрался с не подтягивавшимися константами">
+      <created>1703689837514</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1703689837514</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,6 +151,7 @@
     <MESSAGE value="первый урок из курса по разработке telegram ботов на java" />
     <MESSAGE value="- устранена проблема с устаревшими методами&#10;- не разобрался как он подключил из своего модуля статические константы, он сам написал что так лучше не делать, так что пока оставил там строки с названиями очередей, возможно потом захардкожу их где-то ещё&#10;второй урок из курса по разработке telegram ботов на java&#10;начали писать слой сервисов." />
     <MESSAGE value="- устранена проблема с устаревшими методами&#10;- не разобрался как он подключил из своего модуля статические константы, он сам написал что так лучше не делать, так что пока оставил там строки с названиями очередей, возможно потом захардкожу их где-то ещё&#10;второй урок из курса по разработке telegram ботов на java&#10;начали писать слой сервисов.&#10;-поправил косячный импорт и убрал лишние логи на старте при создании контекста" />
-    <option name="LAST_COMMIT_MESSAGE" value="- устранена проблема с устаревшими методами&#10;- не разобрался как он подключил из своего модуля статические константы, он сам написал что так лучше не делать, так что пока оставил там строки с названиями очередей, возможно потом захардкожу их где-то ещё&#10;второй урок из курса по разработке telegram ботов на java&#10;начали писать слой сервисов.&#10;-поправил косячный импорт и убрал лишние логи на старте при создании контекста" />
+    <MESSAGE value="- разобрался с не подтягивавшимися константами" />
+    <option name="LAST_COMMIT_MESSAGE" value="- разобрался с не подтягивавшимися константами" />
   </component>
 </project>
