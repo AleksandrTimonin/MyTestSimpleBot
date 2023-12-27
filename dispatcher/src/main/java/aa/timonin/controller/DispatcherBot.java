@@ -31,7 +31,7 @@ public class DispatcherBot extends TelegramLongPollingBot {
     public DispatcherBot( @Value("${bot.token}") String botToken, UpdateController updateController) {
 
         super(botToken);
-        log.debug( "КОНСТРУКТОР ДИСПАТЧЕР БОТ ");
+
         this.updateController = updateController;
     }
 
@@ -39,7 +39,7 @@ public class DispatcherBot extends TelegramLongPollingBot {
 
     @PostConstruct
     private void init(){
-        log.debug( "ПОСТКОНСТРАКТ метод ИНИТ в ДИСПАТЧЕР БОТ ");
+
         updateController.registerBot(this);
     }
 

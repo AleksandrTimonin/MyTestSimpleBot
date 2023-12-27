@@ -4,23 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ff3e9f8-f2a1-4aa9-b0b2-1198bec70783" name="Changes" comment="первый урок из курса по разработке telegram ботов на java">
-      <change afterPath="$PROJECT_DIR$/common-RabbitMQ/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-RabbitMQ/src/main/java/aa/timonin/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common-RabbitMQ/src/main/java/aa/timonin/RabbitQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/controller/UpdateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/service/AnswerConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/service/UpdateProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/service/impl/AnswerConsumerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/service/impl/UpdateProducerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/utils/MessageUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatcher/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/pom.xml" afterDir="false" />
+    <list default="true" id="9ff3e9f8-f2a1-4aa9-b0b2-1198bec70783" name="Changes" comment="- устранена проблема с устаревшими методами&#10;- не разобрался как он подключил из своего модуля статические константы, он сам написал что так лучше не делать, так что пока оставил там строки с названиями очередей, возможно потом захардкожу их где-то ещё&#10;второй урок из курса по разработке telegram ботов на java&#10;начали писать слой сервисов.">
       <change beforePath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/controller/DispatcherBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/controller/DispatcherBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatcher/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703608371601</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="- устранена проблема с устаревшими методами&#10;- не разобрался как он подключил из своего модуля статические константы, он сам написал что так лучше не делать, так что пока оставил там строки с названиями очередей, возможно потом захардкожу их где-то ещё&#10;второй урок из курса по разработке telegram ботов на java&#10;начали писать слой сервисов.">
+      <created>1703686671724</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1703686671724</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,6 +130,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="первый урок из курса по разработке telegram ботов на java" />
-    <option name="LAST_COMMIT_MESSAGE" value="первый урок из курса по разработке telegram ботов на java" />
+    <MESSAGE value="- устранена проблема с устаревшими методами&#10;- не разобрался как он подключил из своего модуля статические константы, он сам написал что так лучше не делать, так что пока оставил там строки с названиями очередей, возможно потом захардкожу их где-то ещё&#10;второй урок из курса по разработке telegram ботов на java&#10;начали писать слой сервисов." />
+    <option name="LAST_COMMIT_MESSAGE" value="- устранена проблема с устаревшими методами&#10;- не разобрался как он подключил из своего модуля статические константы, он сам написал что так лучше не делать, так что пока оставил там строки с названиями очередей, возможно потом захардкожу их где-то ещё&#10;второй урок из курса по разработке telegram ботов на java&#10;начали писать слой сервисов." />
   </component>
 </project>
