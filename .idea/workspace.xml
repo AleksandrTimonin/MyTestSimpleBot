@@ -4,13 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ff3e9f8-f2a1-4aa9-b0b2-1198bec70783" name="Changes" comment="- разобрался с не подтягивавшимися константами">
-      <change afterPath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/config/RabbitMQConfiguration.java" afterDir="false" />
+    <list default="true" id="9ff3e9f8-f2a1-4aa9-b0b2-1198bec70783" name="Changes" comment="урок третий, добавили очереди rabbitmq.">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/aa/timonin/NodeApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/aa/timonin/config/RabbitMQConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/aa/timonin/service/ConsumerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/aa/timonin/service/ProducerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/aa/timonin/service/impl/ConsumerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/aa/timonin/service/impl/ProducerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/resources/application.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatcher/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/service/UpdateProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/service/UpdateProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/service/impl/UpdateProducerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/service/impl/UpdateProducerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/config/RabbitMQConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/config/RabbitMQConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/controller/UpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/controller/UpdateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/service/impl/AnswerConsumerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/service/impl/AnswerConsumerImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dispatcher/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,18 +50,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "/home/NC.TECHNOSPARK.RU/timonin.aa/simpleBotwithRabbitMQ/node/src/main/resources",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/node/src/main/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="aa.timonin.config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.DispatcherApp">
     <configuration name="DispatcherApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="aa.timonin.DispatcherApp" />
       <module name="dispatcher" />
@@ -64,9 +84,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="aa.timonin.Main" />
+      <module name="node" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="aa.timonin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NodeApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="aa.timonin.NodeApp" />
+      <module name="node" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="aa.timonin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.DispatcherApp" />
+        <item itemvalue="Application.NodeApp" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -121,7 +169,21 @@
       <option name="project" value="LOCAL" />
       <updated>1703689837514</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="- разобрался с не подтягивавшимися константами">
+      <created>1703692251635</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1703692251635</updated>
+    </task>
+    <task id="LOCAL-00008" summary="урок третий, добавили очереди rabbitmq.">
+      <created>1703692415822</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1703692415822</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,7 +213,8 @@
     <MESSAGE value="первый урок из курса по разработке telegram ботов на java" />
     <MESSAGE value="- устранена проблема с устаревшими методами&#10;- не разобрался как он подключил из своего модуля статические константы, он сам написал что так лучше не делать, так что пока оставил там строки с названиями очередей, возможно потом захардкожу их где-то ещё&#10;второй урок из курса по разработке telegram ботов на java&#10;начали писать слой сервисов." />
     <MESSAGE value="- устранена проблема с устаревшими методами&#10;- не разобрался как он подключил из своего модуля статические константы, он сам написал что так лучше не делать, так что пока оставил там строки с названиями очередей, возможно потом захардкожу их где-то ещё&#10;второй урок из курса по разработке telegram ботов на java&#10;начали писать слой сервисов.&#10;-поправил косячный импорт и убрал лишние логи на старте при создании контекста" />
-    <MESSAGE value="- разобрался с не подтягивавшимися константами" />
-    <option name="LAST_COMMIT_MESSAGE" value="- разобрался с не подтягивавшимися константами" />
+    <MESSAGE value="урок третий, добавили очереди rabbitmq" />
+    <MESSAGE value="урок третий, добавили очереди rabbitmq." />
+    <option name="LAST_COMMIT_MESSAGE" value="урок третий, добавили очереди rabbitmq." />
   </component>
 </project>

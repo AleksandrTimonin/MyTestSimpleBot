@@ -23,10 +23,12 @@ public class RabbitMQConfiguration {
     @Bean
     public Queue photoMessageQueue(){
         return new Queue(PHOTO_UPDATE_QUEUE);
-    }@Bean
+    }
+    @Bean
     public Queue docMessageQueue(){
         return new Queue(DOC_UPDATE_QUEUE);
-    }@Bean
+    }
+    @Bean
     public Queue answerQueue(){
         return new Queue(ANSWER_MESSAGE_QUEUE);
     }

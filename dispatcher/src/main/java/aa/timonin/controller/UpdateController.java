@@ -85,7 +85,7 @@ public class UpdateController {
         var sendMessage = prepareSendMessage(update, "Сообщение получено, обрабатывается...");
         setView(sendMessage);
     }
-    private void setView(SendMessage sendMessage) {
+    public void setView(SendMessage sendMessage) {
         dispatcherBot.sendAnswerMessage(sendMessage);
     }
 }
