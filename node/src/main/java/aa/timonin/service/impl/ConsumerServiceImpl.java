@@ -12,22 +12,18 @@ import static aa.timonin.RabbitQueue.*;
 @Log4j
 @Service
 public class ConsumerServiceImpl implements ConsumerService {
-    private final ProducerServiceImpl  producerService;
+    private final MainServiceImpl  mainService;
 
-    public ConsumerServiceImpl(ProducerServiceImpl producerService) {
-        this.producerService = producerService;
+    public ConsumerServiceImpl(MainServiceImpl mainService) {
+        this.mainService = mainService;
     }
 
     @Override
     @RabbitListener(queues = TEXT_UPDATE_QUEUE)
     public void consumeTextMessageUpdates(Update update) {
+        log.debug("NODE : message received " + update.getMessage().getText());
+        mainService.processTextMessage(update);
 
-        var message = update.getMessage();
-        log.debug("NODE: text received " + message.getText());
-        var sendMessage = new SendMessage();
-        sendMessage.setChatId(message.getChatId().toString());
-        sendMessage.setText("Hello from NODE");
-        producerService.produceAnswer(sendMessage);
 
     }
 

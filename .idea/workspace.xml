@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ff3e9f8-f2a1-4aa9-b0b2-1198bec70783" name="Changes" comment="урок четвёртый, добавили интеграцию между сервисами обработки и диспетчером, отладили обработку запросов.">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/aa/timonin/entity/RawData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/aa/timonin/repository/RawDataRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/aa/timonin/service/MainService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node/src/main/java/aa/timonin/service/impl/MainServiceImpl.java" afterDir="false" />
+    <list default="true" id="9ff3e9f8-f2a1-4aa9-b0b2-1198bec70783" name="Changes" comment="урок пятый и шестой не поностью, добавили репозиторий и подключили базу данных. Необходимо дописать логику сохранения в базу данных сообщения пришедшего от пользователя">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/controller/UpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/controller/UpdateController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dispatcher/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/src/main/java/aa/timonin/entity/RawData.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/aa/timonin/entity/RawData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/src/main/java/aa/timonin/service/impl/ConsumerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/aa/timonin/service/impl/ConsumerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/src/main/java/aa/timonin/service/impl/MainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/aa/timonin/service/impl/MainServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,12 +32,16 @@
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
         <entry key="com.haulmont.jpb.jpaStructure" value="true" />
       </map>
     </option>
     <option name="myId2Visible">
       <map>
-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
     </option>
   </component>
@@ -74,7 +76,7 @@
       <recent name="aa.timonin.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DispatcherApp">
+  <component name="RunManager" selected="Application.NodeApp">
     <configuration name="DispatcherApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="aa.timonin.DispatcherApp" />
       <module name="dispatcher" />
@@ -116,8 +118,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DispatcherApp" />
         <item itemvalue="Application.NodeApp" />
+        <item itemvalue="Application.DispatcherApp" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -194,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706028060932</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="урок пятый и шестой не поностью, добавили репозиторий и подключили базу данных. Необходимо дописать логику сохранения в базу данных сообщения пришедшего от пользователя">
+      <created>1706201563644</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1706201563644</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -227,6 +236,7 @@
     <MESSAGE value="урок третий, добавили очереди rabbitmq" />
     <MESSAGE value="урок третий, добавили очереди rabbitmq." />
     <MESSAGE value="урок четвёртый, добавили интеграцию между сервисами обработки и диспетчером, отладили обработку запросов." />
-    <option name="LAST_COMMIT_MESSAGE" value="урок четвёртый, добавили интеграцию между сервисами обработки и диспетчером, отладили обработку запросов." />
+    <MESSAGE value="урок пятый и шестой не поностью, добавили репозиторий и подключили базу данных. Необходимо дописать логику сохранения в базу данных сообщения пришедшего от пользователя" />
+    <option name="LAST_COMMIT_MESSAGE" value="урок пятый и шестой не поностью, добавили репозиторий и подключили базу данных. Необходимо дописать логику сохранения в базу данных сообщения пришедшего от пользователя" />
   </component>
 </project>

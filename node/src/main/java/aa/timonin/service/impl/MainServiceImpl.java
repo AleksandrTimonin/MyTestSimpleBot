@@ -5,6 +5,7 @@ import aa.timonin.repository.RawDataRepository;
 import aa.timonin.service.MainService;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Service;
+import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 @Log4j
 @Service
@@ -19,14 +20,21 @@ public class MainServiceImpl implements MainService {
     
     @Override
     public void processTextMessage(Update update) {
-        saveRawData(update);
+
+        Long id = saveRawData(update);
+        SendMessage answer = new SendMessage();
+        answer.setText("Сообщение получено ..");
+        answer.setChatId(update.getMessage().getChatId());
+        producerService.produceAnswer(answer);
+        log.debug(repository.findById(id).orElseThrow().getEvent().getMessage().getText());
+
     }
 
-    private void saveRawData(Update update) {
+    private Long saveRawData(Update update) {
         RawData rawData = RawData.builder()
                                 .event(update)
                                 .build();
-        repository.save(rawData);
+        return repository.save(rawData).getId();
 
     }
 }

@@ -18,7 +18,6 @@ public class UpdateController {
 
     private UpdateProducer updateProducer;
     public void registerBot(DispatcherBot dispatcherBot){
-        log.debug( " метод РЕГИСТР БОТ в АПДЕЙТ КОНТРОЛЛЕР ");
         this.dispatcherBot = dispatcherBot;
 
     }
@@ -43,11 +42,11 @@ public class UpdateController {
 
     private void distributeMessageByType(Update update) {
         var message = update.getMessage();
-        if(message.getText() != null){
+        if(message.hasText()){
             processTextMessage(update);
-        }else if(message.getPhoto() != null){
+        }else if(message.hasPhoto()){
             processPhotoMessage(update);
-        }else if(message.getDocument() != null){
+        }else if(message.hasDocument()){
             processDocMessage(update);
 
         }else {
