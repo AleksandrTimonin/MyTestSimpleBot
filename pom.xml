@@ -12,7 +12,9 @@
         <module>dispatcher</module>
         <module>common-RabbitMQ</module>
         <module>node</module>
+        <module>common-jpa</module>
     </modules>
+
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
