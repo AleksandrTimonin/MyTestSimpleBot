@@ -1,8 +1,8 @@
-package timonin.aa.entity;
+package aa.timonin.entity;
 
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
-import timonin.aa.entity.enums.UserState;
+import aa.timonin.entity.enums.UserState;
 
 
 import javax.persistence.*;

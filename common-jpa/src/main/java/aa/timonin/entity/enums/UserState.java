@@ -1,4 +1,4 @@
-package timonin.aa.entity.enums;
+package aa.timonin.entity.enums;
 
 public enum UserState {
     BASIC_STATE,

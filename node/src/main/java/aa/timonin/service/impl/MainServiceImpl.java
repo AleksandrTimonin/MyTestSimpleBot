@@ -7,13 +7,13 @@ import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
-import timonin.aa.entity.AppUser;
-import timonin.aa.entity.enums.UserState;
-import timonin.aa.repository.AppUserRepository;
+import aa.timonin.entity.AppUser;
+import aa.timonin.repository.AppUserRepository;
+
 
 import static aa.timonin.service.enums.ServiceCommands.*;
-import static timonin.aa.entity.enums.UserState.BASIC_STATE;
-import static timonin.aa.entity.enums.UserState.WAIT_FOR_EMAIL_STATE;
+import static aa.timonin.entity.enums.UserState.BASIC_STATE;
+import static aa.timonin.entity.enums.UserState.WAIT_FOR_EMAIL_STATE;
 
 @Log4j
 @Service

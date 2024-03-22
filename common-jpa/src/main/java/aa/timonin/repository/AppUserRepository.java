@@ -1,7 +1,7 @@
-package timonin.aa.repository;
+package aa.timonin.repository;
 
+import aa.timonin.entity.AppUser;
 import org.springframework.data.jpa.repository.JpaRepository;
-import timonin.aa.entity.AppUser;
 
 public interface AppUserRepository extends JpaRepository<AppUser, Long> {
     AppUser findAppUserByTelegramUserId(Long id);
