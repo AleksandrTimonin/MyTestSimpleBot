@@ -31,6 +31,7 @@ public class ConsumerServiceImpl implements ConsumerService {
     @RabbitListener(queues = DOC_UPDATE_QUEUE)
     public void consumeDocMessageUpdates(Update update) {
         log.debug("NODE: doc received");
+        mainService.processDocMessage(update);
 
     }
 
@@ -38,6 +39,7 @@ public class ConsumerServiceImpl implements ConsumerService {
     @RabbitListener(queues = PHOTO_UPDATE_QUEUE)
     public void consumePhotoMessageUpdates(Update update) {
         log.debug("NODE: photo received");
+        mainService.processPhotoMessage(update);
 
     }
 }
