@@ -1,8 +1,12 @@
 package aa.timonin.service.impl;
 
+import aa.timonin.entity.AppDocument;
 import aa.timonin.entity.RawData;
+import aa.timonin.exceptions.UploadFileException;
 import aa.timonin.repository.RawDataRepository;
+import aa.timonin.service.FileService;
 import aa.timonin.service.MainService;
+import aa.timonin.service.enums.ServiceCommands;
 import lombok.extern.log4j.Log4j;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -21,11 +25,13 @@ public class MainServiceImpl implements MainService {
     private final RawDataRepository repository;
     private final ProducerServiceImpl producerService;
     private final AppUserRepository appUserRepository;
+    private final FileService fileService;
 
-    public MainServiceImpl(RawDataRepository repository, ProducerServiceImpl producerService, AppUserRepository appUserRepository) {
+    public MainServiceImpl(RawDataRepository repository, ProducerServiceImpl producerService, AppUserRepository appUserRepository, FileService fileService) {
         this.repository = repository;
         this.producerService = producerService;
         this.appUserRepository = appUserRepository;
+        this.fileService = fileService;
     }
     
     @Override
@@ -35,7 +41,8 @@ public class MainServiceImpl implements MainService {
         var userState = appUser.getState();
         var text = update.getMessage().getText();
         var output = "";
-        if (CANCEL.equals(text)){
+        ServiceCommands command = ServiceCommands.fromValue(text);
+        if (CANCEL.equals(command)){
             output = cancelProcess(appUser);
         }else if(BASIC_STATE.equals(userState)){
             output = processServiceCommand(appUser, text);
@@ -65,9 +72,18 @@ public class MainServiceImpl implements MainService {
         if(isNotAllowedToSendContent(chatId,appUser)){
             return;
         }
-        //todo: добавить сохранение документа
-        var answer = "Документ успешно загружен : ссылка для скачивания https://test.ru/get-photo/12^$##%*$&532#$%^&";
-        sendAnswer(chatId,answer);
+
+        try {
+            AppDocument appDocument = fileService.processDoc(update.getMessage());
+            //todo добавить генерацию ссылки для скачивания
+            var answer = "Документ успешно загружен" + "ссылка для скачивания : https://fl.telegr.ru/getDoc/qolwyiuefgladsbcajubcfvoaugvf7816235";
+            sendAnswer(chatId,answer);
+
+        }catch (UploadFileException e ){
+            log.error(e);
+            sendAnswer(chatId,"к сожалению что-то пошло не так, попробуйте позже ");
+
+        }
 
     }
 

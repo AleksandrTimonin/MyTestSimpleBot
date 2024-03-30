@@ -42,7 +42,8 @@ public class UpdateController {
 
     private void distributeMessageByType(Update update) {
         var message = update.getMessage();
-        if(message.hasText()){
+        if(message.hasText() && message.getText().startsWith("/")){
+
             processTextMessage(update);
         }else if(message.hasPhoto()){
             processPhotoMessage(update);

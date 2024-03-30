@@ -4,13 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ff3e9f8-f2a1-4aa9-b0b2-1198bec70783" name="Changes" comment="Урок 9 продолжение">
+    <list default="true" id="9ff3e9f8-f2a1-4aa9-b0b2-1198bec70783" name="Changes" comment="- урок 9: добавлен сервис для регистрации пользователей, пока не полностью">
+      <change afterPath="$PROJECT_DIR$/common-jpa/src/main/java/aa/timonin/entity/AppDocument.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-jpa/src/main/java/aa/timonin/entity/BinaryContent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-jpa/src/main/java/aa/timonin/repository/AppDocumentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common-jpa/src/main/java/aa/timonin/repository/BinaryContentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/aa/timonin/exceptions/UploadFileException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/aa/timonin/service/FileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node/src/main/java/aa/timonin/service/impl/FileServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-jpa/src/main/java/timonin/aa/entity/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-jpa/src/main/java/aa/timonin/entity/AppUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-jpa/src/main/java/timonin/aa/entity/enums/UserState.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-jpa/src/main/java/aa/timonin/entity/enums/UserState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-jpa/src/main/java/timonin/aa/repository/AppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-jpa/src/main/java/aa/timonin/repository/AppUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-RabbitMQ/src/main/java/aa/timonin/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/controller/UpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/java/aa/timonin/controller/UpdateController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dispatcher/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dispatcher/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/node/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node/src/main/java/aa/timonin/service/enums/ServiceCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/aa/timonin/service/enums/ServiceCommands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/src/main/java/aa/timonin/service/impl/MainServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/java/aa/timonin/service/impl/MainServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/node/src/main/resources/application.yaml" afterDir="false" />
     </list>
@@ -22,9 +29,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -64,7 +71,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;11&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/NC.TECHNOSPARK.RU/timonin.aa/simpleBotwithRabbitMQ/node/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/OneDrive/JAVA/MyTestSimpleBot&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
@@ -78,7 +85,7 @@
       <recent name="aa.timonin.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NodeApp">
+  <component name="RunManager" selected="Application.DispatcherApp">
     <configuration name="DispatcherApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="aa.timonin.DispatcherApp" />
       <module name="dispatcher" />
@@ -120,8 +127,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NodeApp" />
         <item itemvalue="Application.DispatcherApp" />
+        <item itemvalue="Application.NodeApp" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
